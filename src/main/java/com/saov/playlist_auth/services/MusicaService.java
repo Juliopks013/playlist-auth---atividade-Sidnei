@@ -31,8 +31,7 @@ public class MusicaService {
 
     public Musicas atualizar(String id, Musicas musica){
         Musicas existente = buscarPorId(id);
-        existente.setId(musica.getId());
-        existente.setId(musica.getNome());
+        existente.setNome(musica.getNome());
         existente.setArtista(musica.getArtista());
         existente.setAno(musica.getAno());
         return musicaRepository.save(existente);
